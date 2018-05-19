@@ -9,6 +9,7 @@ class Song
   def artist_name=(name)
     x = Artist.find_or_create_by_name(name)
     x.add_song(self)
+    puts self
     self
   end
 
